@@ -96,10 +96,14 @@ const Goods = () => {
               <Row>
                 <Col xs={22} sm={22} md={22} lg={22} xl={5} flex>
                   <Card title={oneGoods.name} hoverable>
+                  {oneGoods.imageUrl ? (
+                    <Image width={200} src={oneGoods.imageUrl} />
+                  ) : (
                     <Image
                       width={200}
                       src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
                     />
+                  )}
                     <Paragraph>
                       <Text>count: {oneGoods.count}</Text>
                     </Paragraph>
